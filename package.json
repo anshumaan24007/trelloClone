@@ -2,9 +2,10 @@
   "name": "trello-clone",
   "version": "1.0.0",
   "description": "Trello Clone Assignment",
-  "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html --public-url ./"
   },
   "author": "Anshuman Srivastava",
   "license": "ISC",
