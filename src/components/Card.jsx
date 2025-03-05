@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Draggable } from "react-beautiful-dnd";
 import CardModal from "./CardModal";
 import { Clock, Circle, CircleCheck, AlignLeft } from "lucide-react";
+import _ from "lodash";
 
 const Card = ({
   card,
@@ -52,13 +53,7 @@ const Card = ({
             <span className="flex gap-2 items-center">
               {card.dueDate && (
                 <p className="text-xs text-gray-500 flex items-center gap-1 mt-1">
-                  <Clock size={12} />{" "}
-                  {
-                    (([_, m, d, y] = new Date(card.dueDate)
-                      .toDateString()
-                      .split(" ")),
-                    `${+d} ${m} ${y}`)
-                  }
+                  <Clock size={12} /> {card.dueDate}
                 </p>
               )}
               {card.description ? <AlignLeft size={16} /> : ""}
